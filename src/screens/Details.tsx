@@ -16,14 +16,14 @@ interface Props {
 }
 const Details = ({route}: Props) => {
   const movie: MovieItem = route.params.movie;
-  const apiKey = useSelector((state: RootState) => state.apiKey);
+  const {value} = useSelector((state: RootState) => state.apiKey);
   const [details, setDetails] = useState<MovieDetails>({});
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const getDetails = async () => {
       const detailData: any = await MoviesService.getMoviesData(
-        `?i=${movie.imdbID}&plot=full&apikey=${apiKey.value}`,
+        `?i=${movie.imdbID}&plot=full&apikey=${value}`,
       );
 
       if (detailData.Response === 'True') {
