@@ -1,5 +1,4 @@
 # Teste Prático - React Native DTI Digital
-> About the project
 
 This project consist in an app to search and view movies details and order by alphabetic. The API used in this application was the <a href="http://www.omdbapi.com/">OMDb API</a>.
 
